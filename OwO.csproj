@@ -1,0 +1,29 @@
+
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>default</LangVersion>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    </PropertyGroup>
+
+<ItemGroup>
+    <Reference Include="ModGenesia">
+        <HintPath>C:/Program Files (x86)/Steam/steamapps/common/Rogue Genesia/Modded/Rogue Genesia_Data\Managed\ModGenesia.dll</HintPath>
+    </Reference>
+    <Reference Include="RogueGenesia">
+        <HintPath>C:/Program Files (x86)/Steam/steamapps/common/Rogue Genesia/Modded/Rogue Genesia_Data\Managed\RogueGenesia.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Localization">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Rogue Genesia\Modded\Rogue Genesia_Data\Managed\Unity.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+        <HintPath>C:/Program Files (x86)/Steam/steamapps/common/Rogue Genesia/Modded/Rogue Genesia_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+        <HintPath>C:/Program Files (x86)/Steam/steamapps/common/Rogue Genesia/Modded/Rogue Genesia_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+</ItemGroup>
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+        <Exec Command="copy &quot;c:\Users\knelse\Documents\Rogue Genesia\ModSource\OwO\bin\Debug\netstandard2.0\OwO.deps.json&quot; &quot;c:\Program Files (x86)\Steam\steamapps\common\Rogue Genesia\Modded\Mods\OwO\&quot; /y&#xA;copy &quot;c:\Users\knelse\Documents\Rogue Genesia\ModSource\OwO\bin\Debug\netstandard2.0\OwO.dll&quot; &quot;c:\Program Files (x86)\Steam\steamapps\common\Rogue Genesia\Modded\Mods\OwO\&quot; /y&#xA;copy &quot;c:\Users\knelse\Documents\Rogue Genesia\ModSource\OwO\bin\Debug\netstandard2.0\OwO.pdb&quot; &quot;c:\Program Files (x86)\Steam\steamapps\common\Rogue Genesia\Modded\Mods\OwO\&quot; /y" />
+    </Target>
+</Project>
