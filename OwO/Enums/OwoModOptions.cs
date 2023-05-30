@@ -11,5 +11,7 @@ public enum OwoModOptions
     Owo_AchievementDescription,
     Owo_Tooltip,
     Owo_Talent,
-    Owo_Event
+    Owo_Event,
+    Owo_Bestiary,
+    Owo_InsultFreeRog
 }
